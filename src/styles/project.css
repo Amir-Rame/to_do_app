@@ -1,0 +1,29 @@
+
+.project-box{
+    margin: 1.5rem;
+    border-radius: 5px;
+    background-color: #fefcfb;
+    box-shadow: 0 0 5px #595959a3;
+}
+
+.tasks-panel{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30rem,1fr));
+}
+
+.tasks-panel .task-box{
+    max-width: 40rem;
+    cursor:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

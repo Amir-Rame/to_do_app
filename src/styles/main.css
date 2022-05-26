@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*,*::before,*::after{
+    inset:0;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+
+    --color-low-priority: #35dc23;
+    --color-mid-priority: #ffc72d;
+    --color-high-priority: #ff444a;
+    --color-accent: #1ba8ff;
+    --color-dark: #051923;
+    --color-light: #fefcfb;
+    --color-theme-one: #def2ff;
+    --color-theme-two: #112655;
+}
+body{
+    background-color: var(--color-accent);
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+main{
+    display: flex;
+    overflow-x: scroll;
+    flex-grow: 1;
+}
+/* nav */
+header{
+    display: flex ;
+    position:sticky;
+    height:100vh;
+    left:0;
+    z-index: 1;
+}
+nav{
+    background-color: var(--color-light);
+    overflow: hidden;
+    width: 5.5rem;
+    transition: all .2s ease-in-out;
+}
+nav:hover{
+    width: 20rem;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-light);
+    transition: all .1s ease-in-out;
+}
+nav span img{
+    margin:2rem .5rem;
+    max-width: 4.5rem;
+}
+nav span{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--color-dark);
+}
+nav span h1{
+    white-space: nowrap;
+    font-size: 2rem;
+    margin-left:1rem;
+}
+
+nav ul li:hover a,.li-active a{
+    color: var(--color-light);
+}
+nav ul li:hover, .li-active{
+    background-color: var(--color-theme-two);
+    border-left: 5px solid var(--color-accent);
+}
+nav ul li:hover img, .li-active img {
+    filter: invert();
+}
+nav ul li img{
+    max-width: 3rem;
+    margin: 1rem;
+    transition: all .2s ease-in-out;
+}
+nav ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color-dark);
+    margin-left:1rem;
+    transition: all .2s ease-in-out;
+}
+/* main */
+#container{
+    display: flex;
+}
+#time{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    position: fixed;
+    inset: auto 2rem 2rem auto;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    color: var(--color-light);
+    transition: all .2s ease-in-out;
+    padding:1rem;
+    margin:.5rem;
+    border-radius: 10px;
+}
+@media only screen and (max-width:40rem) {
+    #time{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

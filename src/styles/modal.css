@@ -1,0 +1,99 @@
+
+/* modal */
+#modal{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width:fit-content;
+    height: fit-content;
+    top:50%;
+    left:50%;
+    transition: all .2s ease-in-out;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: 3;
+}
+#cover{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    width:100vw;
+    height:100vh;
+    z-index: 2;
+    display: none;
+    backdrop-filter:blur(2px);
+}
+#modal-menu{
+    display: flex;
+}
+#modal-menu div{
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: all .2s ease-in-out;
+}
+#modal-menu div:hover{
+    transform: scale(1.05);
+}
+.active-modal-menu{
+    transform: scale(1.05); 
+}
+#modal-menu div:nth-of-type(1),#modal-menu div:nth-of-type(2){
+    background-color: var(--color-low-priority);
+}
+#modal-menu div:nth-of-type(3){
+    background-color: var(--color-accent);
+}
+#modal-menu div:nth-of-type(4){
+    background-color: var(--color-high-priority);
+}
+#modal-menu span{
+    font-size: 2rem;
+    padding:1rem;
+    color: var(--color-light);
+    font-weight: bold;
+}
+/* content */
+#modal-content{
+    border-radius: 0 10px 10px 10px;
+    z-index: 1;
+    gap:1rem;
+    padding: 1rem;
+    background-color: var(--color-light);
+    transition: all .2s ease-in-out;
+    max-width: 50rem;
+}
+#modal-content input,#modal-content textarea,#modal-content select{
+    padding: .5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--color-theme-two);
+}
+#modal-content input[type="checkbox"]{
+    transform: scale(2);
+    margin:.5rem;
+}
+#modal-content h4{
+    font-size: 2rem;
+}
+#modal-content span{
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cancel-btn{
+    border: 2px solid var(--color-high-priority);
+}
+.delete-btn{
+    background-color: var(--color-high-priority);
+    color:var(--color-light);
+}
+.create-btn,.edit-btn{
+    border: 2px solid var(--color-low-priority);
+}
+
+
+

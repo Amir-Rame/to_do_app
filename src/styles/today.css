@@ -1,0 +1,69 @@
+
+#today-table{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+    width:fit-content;
+    height: fit-content;
+    margin: 2rem;
+    border-radius: 5px;
+    padding:2rem .5rem;
+    max-width: 100rem;
+    min-width: 46rem;
+}
+
+.today-item{
+    display: grid;
+    grid-template-columns: 1fr .5fr 3fr 6fr 3fr 3fr 1fr ; /* {border: priority} id , checkbox , title , description , edit/delete icon , */
+    
+    border-radius: 5px;
+    background-color: var(--color-theme-one);
+    margin:.5rem;
+    padding:1rem;
+    font-size: 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.today-item input{
+    transform: scale(1.7);
+    cursor: pointer;
+}
+.today-item input:hover{
+    transform: scale(1.75);
+}
+
+.today-item h4,p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding:1rem;
+}
+
+#today-title{
+    font-size: 2.5rem;
+    padding:1rem;
+    display: block;
+}
+
+.today-item img{
+    width: 3rem;
+    margin: 0 .5rem ;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    -webkit-user-drag:none;
+}
+.today-item img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
